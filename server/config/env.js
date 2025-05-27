@@ -1,5 +1,5 @@
 module.exports = {
-    API_URL: process.env.API_URL || 'http://localhost:10000/api',
+    API_URL: process.env.API_URL || 'http://localhost:10000',
     DATABASE: process.env.DATABASE || 'mongodb+srv://arailes:OAGpjqCtI9uYhEPk@cluster.mongodb.net/easytrage?retryWrites=true&w=majority',
     APP_PATH: process.env.APP_PATH || '/usr/src/app',
     CONFIG_PATH: process.env.CONFIG_PATH || '/usr/src/app/config',
