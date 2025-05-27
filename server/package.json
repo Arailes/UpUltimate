@@ -8,6 +8,7 @@
     "body-parser": "^1.18.2",
     "ccxt": "^1.11.84",
     "cors": "^2.8.4",
+    "crypto-js": "^4.2.0",
     "express": "^4.16.2",
     "jsonwebtoken": "^8.1.1",
     "marked": "^0.3.12",

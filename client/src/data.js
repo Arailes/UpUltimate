@@ -1,7 +1,7 @@
 //data.js
 const data = [
-    { id: 1, username: 'vikram', email:'vmelkote@ucsc.edu'},
-    { id: 2, username: 'mike', email:'mijhamil@ucsc.edu'}
+    { id: 1, username: 'biro', email:'burbble24@gmail.com'},
+    { id: 2, username: 'arailes', email:'arailesfeitosa@gmail.com'}
 ]
 
 module.exports = data;
