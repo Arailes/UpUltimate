@@ -17,8 +17,8 @@ A bot that continuously queries cryptocurrency exchanges for prices to check for
 
 Start app
 
-1. Open new terminaldocker-compose up window
-2. `` (add `--build` if changes have been made)
+1. Open new terminal window
+2. `docker-compose up` (add `--build` if changes have been made)
 
 Stopping app containers
 
@@ -36,4 +36,4 @@ Accessing db shell
 2. `docker exec -it mongo /bin/bash`
 3. `mongo`
 
-To exit mongo shell (or docker container's bash): `exit`
+To exit mongo shell (or docker container's bash): `exit`v
