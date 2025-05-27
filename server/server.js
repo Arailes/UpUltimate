@@ -20,7 +20,7 @@ if (fs.existsSync(env.HTTPS_KEY) && fs.existsSync(env.HTTPS_CERT)) {
 
 var router = express.Router();
 
-var port = process.env.PORT || process.env.API_PORT || 3001;
+var port = process.env.PORT || process.env.API_PORT || 10000;
 
 mongoose.connect(env.DATABASE);
 
