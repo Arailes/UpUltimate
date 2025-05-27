@@ -7,15 +7,20 @@ var cors = require('cors');
 var env = require('./config/env');
 var fs = require('fs');
 
-//https key/cert setup
-var hskey = fs.readFileSync(env.HTTPS_KEY);
-var hscert = fs.readFileSync(env.HTTPS_CERT);
-var options = {key: hskey, cert:hscert};
-var app = express(options);
+// Render já fornece HTTPS, então rode em HTTP se não houver certificados
+let app;
+if (fs.existsSync(env.HTTPS_KEY) && fs.existsSync(env.HTTPS_CERT)) {
+  var hskey = fs.readFileSync(env.HTTPS_KEY);
+  var hscert = fs.readFileSync(env.HTTPS_CERT);
+  var options = { key: hskey, cert: hscert };
+  app = express(options);
+} else {
+  app = express();
+}
 
 var router = express.Router();
 
-var port = process.env.API_PORT || 3001;
+var port = process.env.PORT || process.env.API_PORT || 3001;
 
 mongoose.connect(env.DATABASE);
 
@@ -46,6 +51,6 @@ const bot = require('./routes/bot');
 app.use('/api/bot', bot);
 
 //set server to listen on port on any interface (0.0.0.0)
-app.listen(port, "0.0.0.0", function() {
-  console.log(`api running on port ${port}`);
+app.listen(port, function() {
+  console.log('api running on port ' + port);
 });

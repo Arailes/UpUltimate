@@ -10,6 +10,7 @@ var fs = require('fs');
 var hskey = fs.readFileSync(env.HTTPS_KEY); //private key to encrypt api keys and secrets
 
 const router = express.Router();
+const jwtSecret = env.JWT_SECRET;
 
 //logs to console if toggle is on
 var logging = true;
@@ -38,7 +39,7 @@ router.post('/login', function (req, res) {
             throw err;
           }
           if (isMatch) {
-            const token = jwt.sign({ user: req.user }, 'temp_pass');
+            const token = jwt.sign({ user: req.user }, jwtSecret);
             User.findOneAndUpdate({ email: email }, { token: token }, (err, user) => {
               if (err) {
                 res.json({ success: false, message: String(err) });
@@ -197,7 +198,7 @@ router.post('/register', function (req, res) {
       return res.json({ success: false, message: err });
     } else {
       if (!user) {
-        const token = jwt.sign({ user: newUser }, 'temp_pass');
+        const token = jwt.sign({ user: newUser }, jwtSecret);
         // newUser.token = token;
         User.addUser(newUser, (err, user) => {
           if (err) {
