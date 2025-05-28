@@ -1,6 +1,6 @@
 {
   "name": "easytrage_client",
-  "homepage": "https://upultimate-1.onrender.com"
+  "backend": "https://upultimate.onrender.com"
   "version": "0.1.0",
   "private": false,
   "dependencies": {
