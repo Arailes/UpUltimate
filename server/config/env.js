@@ -1,6 +1,6 @@
 module.exports = {
-    API_URL: process.env.API_URL || '0.0.0.0:10000',
-    DATABASE: process.env.DATABASE || 'mongodb+srv://arailes:OAGpjqCtI9uYhEPk@cluster.mongodb.net/easytrage?retryWrites=true&w=majority',
+    API_URL: process.env.API_URL || 'http://localhost:10000/api',
+    DATABASE: process.env.DATABASE || 'mongodb+srv://arailes:OAGpjqCtI9uYhEPk@agoravaicluster33.4f6mahg.mongodb.net/?retryWrites=true&w=majority&appName=AgoraVaiCLUSTER33',
     APP_PATH: process.env.APP_PATH || '/usr/src/app',
     CONFIG_PATH: process.env.CONFIG_PATH || '/usr/src/app/config',
     HTTPS_KEY: process.env.HTTPS_KEY || 'config/easytrage-key.pem',
