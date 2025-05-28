@@ -1,7 +1,8 @@
 {
   "name": "easytrage_client",
+  "homepage": "https://upultimate-1.onrender.com"
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "axios": "^0.17.1",
     "marked": "^0.3.12",
