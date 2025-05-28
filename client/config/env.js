@@ -2,7 +2,7 @@
 // Substitua a URL abaixo pela URL pública do backend gerada pelo Render após o deploy do backend.
 
 module.exports = {
-    API_URL: 'https://upultimate-clientedock.onrender.com', // Altere para a URL real do backend
+    API_URL: 'http://localhost:10000', // Altere para a URL real do backend
     APP_PATH: '/usr/src/app',
     CONFIG_PATH: '/usr/src/app/config'
 }
